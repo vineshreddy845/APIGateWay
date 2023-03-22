@@ -1,3 +1,10 @@
+The main why we use API GateWay. sending request to direct to mciroserverice.in order to do.
+That microservice IP address should be public. that is not good.
+=> so that we use API Gateway. forntend should send request to direct to API Gateway.
+=> see in image.png
+
+
+
 Spring Cloud Gateway is a framework for building microservices-based applications.
 It provides support for routing and filtering incoming requests to microservices,
 as well as support for other common features needed to build a microservices architecture
