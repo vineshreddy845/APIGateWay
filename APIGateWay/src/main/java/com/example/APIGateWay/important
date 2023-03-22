@@ -1,0 +1,42 @@
+Spring Cloud Gateway is a framework for building microservices-based applications.
+It provides support for routing and filtering incoming requests to microservices,
+as well as support for other common features needed to build a microservices architecture
+
+
+Route: The basic building block of the gateway. It is defined by an ID, a destination URI,
+a collection of predicates, and a collection of filters.
+A route is matched if the aggregate predicate is true.
+
+Predicate: This is a Java 8 Function Predicate. The input type is a Spring Framework ServerWebExchange.
+This lets you match on anything from the HTTP request, such as headers or parameters.
+
+Filter: These are instances of Spring Framework GatewayFilter that have been constructed with a specific factory.
+Here, you can modify requests and responses before or after sending the downstream request.
+
+
+                                           ->               microserivce(1)
+                                     -
+      frontend--------> API GateWay------>                 microservice(2)
+                                     -
+                                           ->              microservice(3)
+
+  important that we can have multiple apigateway.above
+
+  APIGateway features:
+
+  Spring Boot. Some of its key features include:
+
+  Routing: Spring Cloud Gateway allows you to route incoming requests to specific backend services based on various criteria such as request headers, URI paths, and query parameters.
+
+  Load balancing: Spring Cloud Gateway can distribute requests to backend services across multiple instances, helping to improve performance and reliability.
+
+  Service discovery: Spring Cloud Gateway can integrate with service discovery tools like Eureka and Consul to automatically discover backend services.
+
+  Circuit breaking: Spring Cloud Gateway can use Hystrix to provide circuit-breaking functionality, which can help prevent cascading failures in distributed systems.
+
+  Security: Spring Cloud Gateway supports a variety of authentication and authorization mechanisms, such as JWT tokens and OAuth2.
+
+  Customization: Spring Cloud Gateway is highly customizable and extensible, allowing you to add your own filters and customize the behavior of the gateway.
+
+  Monitoring and metrics: Spring Cloud Gateway can integrate with monitoring and metrics tools like Prometheus and Grafana to provide insight into the performance and health of your APIs.
+
